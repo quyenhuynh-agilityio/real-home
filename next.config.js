@@ -1,16 +1,9 @@
-const withImages = require('next-images')
-const withLess = require('@zeit/next-less')
-module.exports = withImages(
-  {
-    images: {
-      domains: ['images.prismic.io'],
-    },
-    webpack(config, options) {
-      return config
-    }
+const path = require('path');
+
+module.exports = {
+  target: 'serverless',
+  webpack(config) {
+    config.resolve.modules.push(path.resolve('./'));
+    return config;
   },
-  withLess(),
-  {
-    "pagesDir": './src/pages'
-  },
-)
+};
