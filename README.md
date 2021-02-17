@@ -1,10 +1,10 @@
-## REACT TRAINING - PRACTICE TWO
+## NEXTJS TRAINING - PRACTICE ONE
 
-- From _Jan 25, 2021_ to _Feb 01, 2019_
+- From _Feb 17, 2021_ to _Feb 26, 2021_
 
 ## DESCRIPTION
 
-- This document provides the requirements for GitHub Issues App.
+- This document provides the requirements for Real Home Web App.
 
 ## TIMELINE
 

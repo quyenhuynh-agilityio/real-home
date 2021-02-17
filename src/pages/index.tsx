@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { RichText } from 'prismic-reactjs';
 import { Client } from '../../prismic-configuration';
 
+import Button from '../components/Button';
+
 const HomePage = ({ doc }) => {
   if (doc) {
-    return <div>{RichText.asText(doc.data.hero_title)}</div>;
+    return (
+      <Fragment>
+        <div>{RichText.asText(doc.data.hero_title)}</div>
+        <Button className="btn btn-primary bg-red-mandy font-raleWay">
+          All Properties
+        </Button>
+      </Fragment>
+    );
   }
   return null;
 };
