@@ -1,0 +1,148 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "name": "1450 Cloudcroft Drop",
+      "country": "Illinois / Chicago",
+      "price": "$250,000",
+      "image": "/cloudcroft.png"
+    },
+    {
+      "id": 2,
+      "name": "140 Small Village",
+      "country": "Missouri / Kansas City",
+      "price": "$200,000",
+      "image": "/smallVilla.png"
+    },
+    {
+      "id": 3,
+      "name": "1250 Lake House",
+      "country": "Colorado / Denver",
+      "price": "$339,000",
+      "image": "/lakeHouse.png"
+    },
+    {
+      "id": 4,
+      "name": "The Dutch House",
+      "country": "Queens / New-York",
+      "price": "$400,000",
+      "image": "/dutchHouse.png"
+     
+    },
+    {
+      "id": 5,
+      "name": "Haunted Houses",
+      "country": "Westminster / London",
+      "price": "$400,000",
+      "image": "/hauntedHouses.png"
+    },
+    {
+      "id": 6,
+      "name": "1250 Airbnb Homestay",
+      "country": "Missouri / Kansas City",
+      "price": "$339,000",
+      "image": "/lakeViewHouse.png"
+    },
+    {
+      "id": 7,
+      "name": "1560 Big Village",
+      "country": "Illinois / Chicago",
+      "price": "$500,000",
+      "image": "/bigVillage.png"
+    },
+    {
+      "id": 8,
+      "name": "Puerto Real House",
+      "country": "Colorado / Denver",
+      "price": "$500,000",
+      "image": "/puertoRealHouse.png"
+    
+    },
+    {
+      "id": 9,
+      "name": "S-Premium Houses",
+      "country": "Brooklyn / New-York",
+      "price": "$400,000",
+      "image": "/sPremium.png"
+
+    },
+    {
+      "id": 10,
+      "name": "Cardboard House",
+      "country": "Illinois / Chicago",
+      "price": "$350,000",
+      "image": "/cardboardHouse.png"
+    },
+    {
+      "id": 11,
+      "name": "The Conjuring House",
+      "country": "Richmond Park / London",
+      "price": "$250,000",
+      "image": "/conjuringHouse.png"
+    
+    },
+    {
+      "id": 12,
+      "name": "Penhouse Sky Garden",
+      "country": "Colorado / Denver",
+      "price": "$250,000",
+      "image": "/penhouseSky.png"
+    },
+    {
+      "id": 13,
+      "name": "Boutique Penhouse",
+      "country": "Missouri / Kansas City",
+      "price": "$400,000",
+      "image": "/boutiquePenhouse.png"
+    },
+    {
+      "id": 14,
+      "name": "Penhouse and Pool Villa",
+      "country": "Colorado / New-York",
+      "price": "$500,000",
+      "image": "/penhouseAndPool.png"
+    },
+    {
+      "id": 15,
+      "name": "Penhouse Aqua Part",
+      "country": "Missouri / Kansas City",
+      "price": "$200,000",
+      "image": "/penhouseAquaPart.png"
+    },
+    {
+      "id": 16,
+      "name": "Penhouse Dolphin Plaza",
+      "country": "Richmond Park / London",
+      "price": "$400,000",
+      "image": "/penhouseDolphin.png"
+     
+    }, {
+      "id": 17,
+      "name": "1450 Penhouse",
+      "country": "Illinois / Chicago",
+      "price": "$250,000",
+      "image": "/luxuryPenhouse.png"
+    },
+    {
+      "id": 18,
+      "name": "Penhouse River Park",
+      "country": "Westminster / London",
+      "price": "$500,000",
+      "image": "/penhouseRiver.png"
+    },
+    {
+      "id": 19,
+      "name": "Penhouse Suite",
+      "country": "Staten Island / New-York",
+      "price": "$250,000",
+      "image": "/penhouseSuite.png"
+    },
+    {
+      "id": 20,
+      "name": "Sky Villa",
+      "country": "Colorado / Denver",
+      "price": "$400,000",
+      "image": "/skyVilla.png"
+    }
+  ]
+}

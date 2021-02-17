@@ -9,7 +9,7 @@ const HomePage = ({ doc }) => {
     return (
       <Fragment>
         <div>{RichText.asText(doc.data.hero_title)}</div>
-        <Button className="btn btn-primary bg-red-mandy font-raleWay">
+        <Button className="btn btn-primary bg-red-100 font-raleWay">
           All Properties
         </Button>
       </Fragment>
