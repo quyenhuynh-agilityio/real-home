@@ -5,13 +5,13 @@ import { Client } from '../../prismic-configuration';
 import Button from '../components/Button';
 import Featured from '../components/Featured';
 import Offers from '../components/Offers';
+import CardProperty from '../components/CardProperty';
 
 const HomePage = ({ doc }) => {
   if (doc) {
     const { data } = doc || {};
     const { body } = data || [];
     const { offer_title, offer_description } = data || {};
-
     return (
       <Fragment>
         <div>{RichText.asText(doc.data.hero_title)}</div>
@@ -36,6 +36,56 @@ const HomePage = ({ doc }) => {
                 />
               );
             })}
+        </div>
+        <div className="grid grid-cols-3 gap-4">
+          <CardProperty
+            href="/about"
+            imageAlt="1450 Cloudcroft Drop"
+            imageSrc="/boutiquePenhouse.png"
+            propertyName="1450 Cloudcroft Drop"
+            propertyNameCountry="Illinois / Chicago"
+            propertyPrice="$250,000"
+          />{' '}
+          <CardProperty
+            href="/about"
+            imageAlt="1450 Cloudcroft Drop"
+            imageSrc="/boutiquePenhouse.png"
+            propertyName="1450 Cloudcroft Drop"
+            propertyNameCountry="Illinois / Chicago"
+            propertyPrice="$250,000"
+          />{' '}
+          <CardProperty
+            href="/about"
+            imageAlt="1450 Cloudcroft Drop"
+            imageSrc="/boutiquePenhouse.png"
+            propertyName="1450 Cloudcroft Drop"
+            propertyNameCountry="Illinois / Chicago"
+            propertyPrice="$250,000"
+          />{' '}
+          <CardProperty
+            href="/about"
+            imageAlt="1450 Cloudcroft Drop"
+            imageSrc="/boutiquePenhouse.png"
+            propertyName="1450 Cloudcroft Drop"
+            propertyNameCountry="Illinois / Chicago"
+            propertyPrice="$250,000"
+          />{' '}
+          <CardProperty
+            href="/about"
+            imageAlt="1450 Cloudcroft Drop"
+            imageSrc="/boutiquePenhouse.png"
+            propertyName="1450 Cloudcroft Drop"
+            propertyNameCountry="Illinois / Chicago"
+            propertyPrice="$250,000"
+          />{' '}
+          <CardProperty
+            href="/about"
+            imageAlt="1450 Cloudcroft Drop"
+            imageSrc="/boutiquePenhouse.png"
+            propertyName="1450 Cloudcroft Drop"
+            propertyNameCountry="Illinois / Chicago"
+            propertyPrice="$250,000"
+          />
         </div>
       </Fragment>
     );
