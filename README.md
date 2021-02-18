@@ -45,6 +45,8 @@
 
 ## GUIDELINE
 
+<!-- TODO -->
+
 - Clone project at [here](https://github.com/quyenhuynh-agilityio/real-home)
 - `cd real-home`
 - `yarn install`
