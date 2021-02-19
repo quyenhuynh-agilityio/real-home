@@ -8,6 +8,7 @@ import '../styles/layout.scss';
 import '../styles/property.scss';
 import '../styles/our-partners.scss';
 import '../styles/carousel.scss';
+import '../styles/input.scss';
 
 // eslint-disable-next-line react/jsx-props-no-spreading
 const MyApp = ({ Component, pageProps }: AppProps) => (

@@ -1,0 +1,17 @@
+.input {
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: 16;
+  width: unset;
+  padding: 7px;
+  background-color: #fff;
+  margin: 30px 0;
+}
+
+.input:hover,
+:focus {
+  outline: 0;
+  border-color: #2188ff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
