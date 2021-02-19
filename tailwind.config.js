@@ -25,7 +25,7 @@ module.exports = {
       1141: '1141px',
       1147: '1147px',
     },
-    padding: {
+    spacing: {
       10: '10px',
       30: '30px',
       64: '64px',
@@ -34,8 +34,6 @@ module.exports = {
       35: '35px',
       100: '100px',
       122: '122px',
-    },
-    margin: {
       5: '5px',
       10: '10px',
       16: '16px',

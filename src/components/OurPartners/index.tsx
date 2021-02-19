@@ -26,11 +26,11 @@ const OurPartners = ({ partners }: OurPartnersType) => {
         {RichText.asText(primary.our_partners)}
       </div>
       {items &&
-        items.map((item) => {
+        items.map((item, index) => {
           const { url, alt, dimensions } = item.icon || {};
           const { width, height } = dimensions || {};
           return (
-            <div className="px-9">
+            <div className="px-9" key={`${index}-${alt}`}>
               <Image src={url} alt={alt} width={width} height={height} />
             </div>
           );

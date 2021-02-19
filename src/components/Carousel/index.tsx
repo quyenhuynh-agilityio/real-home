@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 import { RichText } from 'prismic-reactjs';
 
-const SimpleSlider = ({ hero }) => {
+const Carousel = ({ hero }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -23,11 +23,8 @@ const SimpleSlider = ({ hero }) => {
             const { hero_image, hero_title, hero_price } = item || {};
             const { url, alt } = hero_image || {};
             return (
-              <Fragment>
-                <div
-                  className="bg-cover container"
-                  key={`${index}-${hero_price}`}
-                >
+              <div key={`${index}-${hero_price}`}>
+                <div className="bg-cover container">
                   <div className="centered">
                     <div className="text-4xl text-white">
                       {RichText.asText(hero_title)}
@@ -60,7 +57,7 @@ const SimpleSlider = ({ hero }) => {
                         }
                       }
                     `}</style>
-              </Fragment>
+              </div>
             );
           })}
       </Slider>
@@ -68,4 +65,4 @@ const SimpleSlider = ({ hero }) => {
   );
 };
 
-export default SimpleSlider;
+export default Carousel;

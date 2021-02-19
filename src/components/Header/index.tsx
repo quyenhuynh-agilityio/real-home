@@ -15,11 +15,12 @@ const Header = ({ prismicData, logo }) => {
         </div>
         <ul className="flex justify-between">
           {prismicData[0] &&
-            prismicData[0].items.map((item) => {
+            prismicData[0].items.map((item, index) => {
+              const { navigation_title } = item || {};
               return (
-                <li className="text-s">
+                <li className="text-s" key={`${index}-${navigation_title}`}>
                   <Link href="/about">
-                    <a>{RichText.asText(item.navigation_title)}</a>
+                    <a>{RichText.asText(navigation_title)}</a>
                   </Link>
                 </li>
               );
@@ -27,9 +28,17 @@ const Header = ({ prismicData, logo }) => {
         </ul>
         <div className="flex justify-around">
           {prismicData[1] &&
-            prismicData[1].items.map((item) => {
+            prismicData[1].items.map((item, index) => {
               const { url, alt } = item.icon || {};
-              return <Image src={url} width={33} height={33} alt={alt} />;
+              return (
+                <Image
+                  src={url}
+                  width={33}
+                  height={33}
+                  alt={alt}
+                  key={`${index}- ${alt}`}
+                />
+              );
             })}
         </div>
       </div>

@@ -6,7 +6,7 @@ import Featured from '../components/Featured';
 import Offers from '../components/Offers';
 import FeaturedProperty from '../components/FeaturedProperty';
 import OurPartners from '../components/OurPartners';
-import SimpleSlider from '../components/Carousel';
+import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -19,7 +19,7 @@ const HomePage = ({ doc }) => {
     return (
       <div className="container">
         <Header prismicData={body1} logo={black_logo} />
-        {body && body[1] && <SimpleSlider hero={body[1]} />}
+        {body && body[1] && <Carousel hero={body[1]} />}
         <Offers title={offer_title} description={offer_description} />
         <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
           {body &&

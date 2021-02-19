@@ -14,23 +14,35 @@ const Footer = ({ prismicData, logo }) => {
           </div>
           <div className="flex justify-between w-176">
             {prismicData[1] &&
-              prismicData[1].items.map((item) => {
+              prismicData[1].items.map((item, index) => {
                 const { url, alt } = item.icon || {};
-                return <Image src={url} width={33} height={33} alt={alt} />;
+                return (
+                  <Image
+                    src={url}
+                    width={33}
+                    height={33}
+                    alt={alt}
+                    key={`${index}- ${alt}`}
+                  />
+                );
               })}
           </div>
         </div>
         <div>
-          <div className="text-xl mb-5">
+          <div className="text-xl pb-5">
             {RichText.asText(prismicData[0].primary.navigation)}{' '}
           </div>
           <ul>
             {prismicData[0] &&
-              prismicData[0].items.map((item) => {
+              prismicData[0].items.map((item, index) => {
+                const { navigation_title } = item || {};
                 return (
-                  <li className="text-s mb-3">
+                  <li
+                    className="text-s pb-5"
+                    key={`${index}-${navigation_title}`}
+                  >
                     <Link href="/about">
-                      <a>{RichText.asText(item.navigation_title)}</a>
+                      <a>{RichText.asText(navigation_title)}</a>
                     </Link>
                   </li>
                 );
@@ -38,14 +50,18 @@ const Footer = ({ prismicData, logo }) => {
           </ul>
         </div>
         <div>
-          <div className="text-xl mb-5">
+          <div className="text-xl pb-5">
             {RichText.asText(prismicData[2].primary.contact_us)}{' '}
           </div>
           {prismicData[2] &&
-            prismicData[2].items.map((item) => {
+            prismicData[2].items.map((item, index) => {
+              const { contact_information } = item || {};
               return (
-                <div className="text-s mb-3">
-                  {RichText.asText(item.contact_information)}
+                <div
+                  className="text-s pb-5"
+                  key={`${index}- ${contact_information}`}
+                >
+                  {RichText.asText(contact_information)}
                 </div>
               );
             })}
