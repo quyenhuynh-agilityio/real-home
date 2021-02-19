@@ -8,12 +8,14 @@ import Offers from '../components/Offers';
 import CardProperty from '../components/CardProperty';
 import OurPartners from '../components/OurPartners';
 import SimpleSlider from '../components/Carousel';
+import Footer from '../components/Footer';
 
 const HomePage = ({ doc }) => {
   if (doc) {
     const { data } = doc || {};
-    const { body } = data || [];
+    const { body, body1, logo } = data || [];
     const { offer_title, offer_description } = data || {};
+    console.log('data', data);
 
     return (
       <Fragment>
@@ -92,6 +94,7 @@ const HomePage = ({ doc }) => {
         </div>
         {body && body[2] && <OurPartners partners={body[2]} />}
         {body && body[1] && <SimpleSlider hero={body[1]} />}
+        <Footer prismicData={body1} logo={logo} />
       </Fragment>
     );
   }
