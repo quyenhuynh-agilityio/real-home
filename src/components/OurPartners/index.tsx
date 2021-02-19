@@ -14,11 +14,11 @@ type Partners = {
 };
 
 type OurPartnersType = {
-  partners: Partners;
+  prismicData: Partners;
 };
 
-const OurPartners = ({ partners }: OurPartnersType) => {
-  const { items, primary } = partners || {};
+const OurPartners = ({ prismicData }: OurPartnersType) => {
+  const { items, primary } = prismicData || {};
 
   return (
     <div className="font-raleWay flex flex-row w-1147 justify-around our-partners-wrapper m-auto">

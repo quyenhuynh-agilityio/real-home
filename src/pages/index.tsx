@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { RichText } from 'prismic-reactjs';
+import React from 'react';
+import { GetStaticProps } from 'next';
 import { Client } from '../../prismic-configuration';
 
 import Featured from '../components/Featured';
@@ -13,13 +13,13 @@ import Header from '../components/Header';
 const HomePage = ({ doc }) => {
   if (doc) {
     const { data } = doc || {};
-    const { body, body1, logo, black_logo } = data || [];
+    const { body, body1, logo, black_logo } = data || {};
     const { offer_title, offer_description } = data || {};
 
     return (
       <div className="container">
         <Header prismicData={body1} logo={black_logo} />
-        {body && body[1] && <Carousel hero={body[1]} />}
+        <Carousel hero={body[1]} />
         <Offers title={offer_title} description={offer_description} />
         <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
           {body &&
@@ -40,8 +40,7 @@ const HomePage = ({ doc }) => {
             })}
         </div>
         <FeaturedProperty prismicData={data} />
-        {body && body[2] && <OurPartners partners={body[2]} />}
-
+        <OurPartners prismicData={body[2]} />
         <Footer prismicData={body1} logo={logo} />
       </div>
     );
@@ -49,7 +48,10 @@ const HomePage = ({ doc }) => {
   return null;
 };
 
-export async function getStaticProps({ preview = null, previewData = {} }) {
+export const getStaticProps: GetStaticProps = async ({
+  preview = null,
+  previewData = {},
+}) => {
   const { ref } = previewData || {};
 
   const client = Client();
@@ -61,6 +63,6 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
       preview,
     },
   };
-}
+};
 
 export default HomePage;

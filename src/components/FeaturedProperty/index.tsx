@@ -27,7 +27,7 @@ const FeaturedProperty = ({ prismicData }: FeaturedType) => {
       <div className="font-playfair text-base pt-64">
         {RichText.asText(featured_properties_description)}{' '}
       </div>
-      <div className="grid grid-cols-3 gap-5 py-64 m-auto">
+      <div className="grid grid-cols-3 gap-10 py-64 m-auto w-1147">
         <CardProperty
           href="/about"
           imageAlt="1450 Cloudcroft Drop"
