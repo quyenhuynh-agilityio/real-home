@@ -11,7 +11,7 @@ type FeaturedType = {
 
 const Featured = ({ src, alt, title, description }: FeaturedType) => {
   return (
-    <div className="font-raleWay featured">
+    <div className="font-raleWay w-230 ml-16 mr-16">
       <Image src={src} alt={alt} width={27} height={27} />
       <div className="text-lg text-gray-70">{RichText.asText(title)}</div>
       <div className="text-sm text-gray-80">{RichText.asText(description)}</div>

@@ -10,7 +10,7 @@ const Footer = ({ prismicData, logo }) => {
       <div className="grid grid-cols-3 gap-4 text-left py-80 px-125 items-baseline">
         <div>
           <div className="mb-5">
-            <Image src={url} alt={alt} width={149} height={20} />
+            <Image src={url} alt={alt} width={174} height={46} />
           </div>
           <div className="flex justify-between w-176">
             {prismicData[1] &&
@@ -24,18 +24,18 @@ const Footer = ({ prismicData, logo }) => {
           <div className="text-xl mb-5">
             {RichText.asText(prismicData[0].primary.navigation)}{' '}
           </div>
-          {prismicData[0] &&
-            prismicData[0].items.map((item) => {
-              return (
-                <ul>
+          <ul>
+            {prismicData[0] &&
+              prismicData[0].items.map((item) => {
+                return (
                   <li className="text-s mb-3">
                     <Link href="/about">
                       <a>{RichText.asText(item.navigation_title)}</a>
                     </Link>
                   </li>
-                </ul>
-              );
-            })}
+                );
+              })}
+          </ul>
         </div>
         <div>
           <div className="text-xl mb-5">

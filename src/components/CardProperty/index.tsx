@@ -27,11 +27,11 @@ const CardProperty = ({
     router.push(href);
   };
   return (
-    <div className="font-raleWay property-wrapper">
+    <div className="font-raleWay property-wrapper m-auto w-1147">
       <a href={href} onClick={handleClick}>
         <Image src={imageSrc} alt={imageAlt} width={365} height={220} />
-        <div className="flex flex-col items-center">
-          <div className="text-lg text-gray-70 my-6">
+        <div className="flex flex-col items-center py-30">
+          <div className="text-lg text-gray-70 mb-5">
             {/* {RichText.asText(propertyName)} */}
             {propertyName}
           </div>
@@ -39,12 +39,12 @@ const CardProperty = ({
             {/* {RichText.asText(propertyNameCountry)} */}
             {propertyNameCountry}
           </div>{' '}
-          <div className="text-sm text-gray-80 my-6">
+          <div className="text-sm text-gray-80 mt-10">
             {/* {RichText.asText(propertyPrice)} */}
             {propertyPrice}
           </div>
         </div>
-        <div className="py-3  border-t border-gray-90 justify-center flex">
+        <div className="py-10 border-t border-gray-90 justify-center flex">
           <span className="text-sm text-gray-80">
             3400 Sq Ft 2 Bedrooms 1 Bathroom
           </span>
