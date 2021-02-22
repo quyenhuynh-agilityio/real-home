@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetServerSideProps } from 'next';
 import { Client } from '../../prismic-configuration';
 
 import Featured from '../components/Featured';
@@ -10,7 +10,8 @@ import Carousel from '../components/Carousel';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-const HomePage = ({ doc }) => {
+const HomePage = ({ doc, properties }) => {
+  console.log('properties', properties);
   if (doc) {
     const { data } = doc || {};
     const { body, body1, logo, black_logo } = data || {};
@@ -39,7 +40,7 @@ const HomePage = ({ doc }) => {
               );
             })}
         </div>
-        <FeaturedProperty prismicData={data} />
+        <FeaturedProperty prismicData={data} properties={properties} />
         <OurPartners prismicData={body[2]} />
         <Footer prismicData={body1} logo={logo} />
       </div>
@@ -48,7 +49,7 @@ const HomePage = ({ doc }) => {
   return null;
 };
 
-export const getStaticProps: GetStaticProps = async ({
+export let getStaticProps: GetStaticProps = async ({
   preview = null,
   previewData = {},
 }) => {
@@ -56,10 +57,12 @@ export const getStaticProps: GetStaticProps = async ({
 
   const client = Client();
   const doc = (await client.getSingle('homepage', ref ? { ref } : null)) || {};
-
+  const result = await fetch(`http://localhost:8000/properties`);
+  const properties = await result.json();
   return {
     props: {
       doc,
+      properties,
       preview,
     },
   };
