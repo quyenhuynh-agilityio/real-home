@@ -24,7 +24,7 @@ const About = ({ doc, prismicHomeData }) => {
     return (
       <div className="container">
         <Header prismicData={body1} logo={black_logo} />
-        <div className="w-1147 m-auto pb-100">
+        <div className="w-1147 mx-auto pb-100">
           <h2 className="font-raleWay text-5xl py-60">
             {RichText.asText(about_our_company)}
           </h2>

@@ -21,7 +21,7 @@ const OurPartners = ({ prismicData }: OurPartnersType) => {
   const { items, primary } = prismicData || {};
 
   return (
-    <div className="font-raleWay flex flex-row w-1147 justify-around our-partners-wrapper m-auto">
+    <div className="font-raleWay flex flex-row w-1147 justify-around our-partners-wrapper mx-auto">
       <div className="text-lg text-gray-70 pr-3 text-3xl">
         {RichText.asText(primary.our_partners)}
       </div>

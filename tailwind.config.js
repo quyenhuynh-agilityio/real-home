@@ -28,6 +28,7 @@ module.exports = {
       1147: '1147px',
     },
     spacing: {
+      0: '0px',
       5: '5px',
       10: '10px',
       16: '16px',
@@ -39,7 +40,8 @@ module.exports = {
       100: '100px',
       122: '122px',
       125: '125px',
-      auto: '0 auto',
+      'x-auto': '0 auto',
+      auto: 'auto',
     },
     extend: {
       colors: {

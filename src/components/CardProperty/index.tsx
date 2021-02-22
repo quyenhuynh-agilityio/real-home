@@ -27,7 +27,7 @@ const CardProperty = ({
     router.push(href);
   };
   return (
-    <div className="font-raleWay property-wrapper m-auto w-1147 mb-10">
+    <div className="font-raleWay property-wrapper mx-auto w-1147 mb-10">
       <a href={href} onClick={handleClick}>
         <Image src={imageSrc} alt={imageAlt} width={365} height={220} />
         <div className="flex flex-col items-center py-30">
