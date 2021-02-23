@@ -25,7 +25,7 @@ const Tab: React.FC<Props> = ({
 
   return (
     <li className={className}>
-      <button onClick={onClick}>{title}</button>
+      <a onClick={onClick}>{title}</a>
     </li>
   );
 };

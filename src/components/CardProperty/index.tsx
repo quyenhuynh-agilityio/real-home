@@ -6,18 +6,20 @@ import { useRouter } from 'next/router';
 type FeaturedType = {
   imageSrc?: string;
   imageAlt?: string;
-  propertyName?: string;
-  propertyPrice?: string;
-  propertyNameCountry?: string;
+  name?: string;
+  price?: string;
+  country?: string;
+  state?: string;
   href?: string;
 };
 
 const CardProperty: React.FC<FeaturedType> = ({
   imageSrc,
   imageAlt,
-  propertyName,
-  propertyNameCountry,
-  propertyPrice,
+  name,
+  country,
+  state,
+  price,
   href,
 }) => {
   const router = useRouter();
@@ -31,18 +33,9 @@ const CardProperty: React.FC<FeaturedType> = ({
       <a href={href} onClick={handleClick}>
         <Image src={imageSrc} alt={imageAlt} width={365} height={220} />
         <div className="flex flex-col items-center py-30">
-          <div className="text-lg text-gray-70 mb-5">
-            {/* {RichText.asText(propertyName)} */}
-            {propertyName}
-          </div>
-          <div className="text-sm text-gray-80">
-            {/* {RichText.asText(propertyNameCountry)} */}
-            {propertyNameCountry}
-          </div>{' '}
-          <div className="text-sm text-gray-80 mt-10">
-            {/* {RichText.asText(propertyPrice)} */}
-            {propertyPrice}
-          </div>
+          <div className="text-lg text-gray-70 mb-5">{name}</div>
+          <div className="text-sm text-gray-80">{`${state} / ${country}`}</div>
+          <div className="text-sm text-gray-80 mt-10">{price}</div>
         </div>
         <div className="py-10 border-t border-gray-90 justify-center flex">
           <span className="text-sm text-gray-80">

@@ -10,7 +10,6 @@ import Carousel from '../components/Carousel';
 import Layout from '../components/Layout';
 
 const HomePage = ({ doc, properties }) => {
-  console.log('properties', properties);
   if (doc) {
     const { data } = doc || {};
     const { body, body1, logo, black_logo } = data || {};

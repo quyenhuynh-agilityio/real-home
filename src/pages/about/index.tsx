@@ -6,7 +6,6 @@ import Image from 'next/image';
 
 import Layout from '../../components/Layout';
 import Featured from '../../components/Featured';
-import Tabs from '../../components/Tabs';
 
 const About = ({ doc, prismicHomeData }) => {
   if (doc && prismicHomeData) {
@@ -21,25 +20,10 @@ const About = ({ doc, prismicHomeData }) => {
 
     const { url, alt } = about_our_company_image || {};
 
-    const tabs = [
-      {
-        title: 'Lemon',
-        content: 'Lemon is yellow',
-      },
-      {
-        title: 'Strawberry',
-        content: 'Lemon is red',
-      },
-      {
-        title: 'Pear',
-        content: 'Lemon is blue',
-      },
-    ];
     return (
       <div className="container">
         <Layout body1={body1} black_logo={black_logo} logo={logo}>
           <div className="w-1147 mx-auto pb-100">
-            <Tabs tabs={tabs} />
             <h2 className="font-raleWay text-5xl py-60">
               {RichText.asText(about_our_company)}
             </h2>

@@ -38,17 +38,18 @@ const FeaturedProperty: NextPage<{
       </div>
       <div className="grid grid-cols-3 gap-10 py-64 mx-auto w-1147">
         {formatData.map((item) => {
-          const { name, country, price, image, id } = item;
+          const { name, country, state, price, image, id } = item;
           const { url, alt } = image || {};
 
           return (
             <CardProperty
-              href="/about"
+              href="/properties"
               imageAlt={alt}
               imageSrc={url}
-              propertyName={name}
-              propertyNameCountry={country}
-              propertyPrice={price}
+              name={name}
+              state={state}
+              country={country}
+              price={price}
               key={`${id}-${name}`}
             />
           );
