@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { RichText } from 'prismic-reactjs';
+
+import { linkResolver } from '../../../prismic-configuration';
 
 const Header = ({ prismicData, logo }) => {
   const { url, alt } = logo || [];
@@ -14,21 +17,21 @@ const Header = ({ prismicData, logo }) => {
           </div>
         </div>
         <ul className="flex justify-between">
-          {prismicData[0] &&
-            prismicData[0].items.map((item, index) => {
-              const { navigation_title } = item || {};
+          {prismicData[2] &&
+            prismicData[2].items.map((item, index) => {
+              const { navigation_label, navigation_path } = item || {};
               return (
-                <li className="text-s" key={`${index}-${navigation_title}`}>
-                  <Link href="/about">
-                    <a>{RichText.asText(navigation_title)}</a>
+                <li className="text-s" key={`${index}-${navigation_label}`}>
+                  <Link href={RichText.asText(navigation_path)}>
+                    <a>{RichText.asText(navigation_label)}</a>
                   </Link>
                 </li>
               );
             })}
         </ul>
         <div className="flex justify-around">
-          {prismicData[1] &&
-            prismicData[1].items.map((item, index) => {
+          {prismicData[0] &&
+            prismicData[0].items.map((item, index) => {
               const { url, alt } = item.icon || {};
               return (
                 <Image

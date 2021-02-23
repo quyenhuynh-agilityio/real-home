@@ -1,38 +1,46 @@
 import React from 'react';
 
-import { GetServerSideProps, NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import ErrorPage from 'next/error';
 
+import { Client } from '../../../prismic-configuration';
+
 import Form from '../../components/Form';
-type User = {
-  id: string;
-  name: string;
-  email: string;
-};
+import { RichText } from 'prismic-reactjs';
 
-type Users = User[];
-
-const Login: NextPage<{ users: Users[] }> = (props) => {
-  if (!props.users) {
+const Login = (props) => {
+  const { log_in_title, email_placeholder, password_placeholder } =
+    props.doc.data || {};
+  if (!props.doc) {
     return <ErrorPage statusCode={404} />;
   }
   return (
     <div className="relative">
       <div className="border border-gray-90 rounded p-30 right-0 left-0 ml-auto mr-auto top-125 w-500 absolute">
-        <div className="text-center">Real Home login</div>
-        <Form />
+        <div className="text-center">{RichText.asText(log_in_title)}</div>
+        <Form
+          email_placeholder={email_placeholder}
+          password_placeholder={password_placeholder}
+        />
       </div>
     </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const result = await fetch(`http://localhost:8000/user`);
-  const users: Users = await result.json();
+export const getStaticProps: GetStaticProps = async ({
+  preview = null,
+  previewData = {},
+}) => {
+  const { ref } = previewData || {};
+
+  const client = Client();
+  const doc =
+    (await client.getSingle('log_in_page', ref ? { ref } : null)) || {};
 
   return {
     props: {
-      users,
+      doc,
+      preview,
     },
   };
 };
