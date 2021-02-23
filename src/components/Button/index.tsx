@@ -7,12 +7,12 @@ type ButtonType = {
   type?: 'button' | 'submit' | 'reset';
 };
 
-const Button = ({
+const Button: React.FC<ButtonType> = ({
   onClick = () => {},
   className = '',
   type = 'button',
   children,
-}: ButtonType) => {
+}) => {
   return (
     <button className={className} onClick={onClick} type={type}>
       {children}

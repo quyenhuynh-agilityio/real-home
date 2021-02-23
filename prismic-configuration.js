@@ -1,6 +1,6 @@
 import Prismic from '@prismicio/client';
 
-export const apiEndpoint = process.env.REACT_APP_API_ENDPOINT;
+export const apiEndpoint = process.env.REACT_APP_PRISMIC_API_ENDPOINT;
 export const accessToken = process.env.REACT_APP_TOKEN;
 
 // Client method to query documents from the Prismic repo

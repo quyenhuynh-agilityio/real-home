@@ -12,6 +12,7 @@ type Property = {
   title?: string;
   description?: string;
 };
+
 type FeaturedType = Property[];
 
 const FeaturedProperty: NextPage<{

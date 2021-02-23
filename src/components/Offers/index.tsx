@@ -6,7 +6,7 @@ type OfferType = {
   description?: string;
 };
 
-const Offers = ({ title, description }: OfferType) => {
+const Offers: React.FC<OfferType> = ({ title, description }) => {
   return (
     <div className="bg-white py-122">
       <div className="font-raleWay grid grid-rows-3 grid-flow-col gap-4 w-1141 mx-auto">

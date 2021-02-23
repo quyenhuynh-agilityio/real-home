@@ -12,14 +12,14 @@ type FeaturedType = {
   href?: string;
 };
 
-const CardProperty = ({
+const CardProperty: React.FC<FeaturedType> = ({
   imageSrc,
   imageAlt,
   propertyName,
   propertyNameCountry,
   propertyPrice,
   href,
-}: FeaturedType) => {
+}) => {
   const router = useRouter();
 
   const handleClick = (e) => {

@@ -17,7 +17,7 @@ type OurPartnersType = {
   prismicData: Partners;
 };
 
-const OurPartners = ({ prismicData }: OurPartnersType) => {
+const OurPartners: React.FC<OurPartnersType> = ({ prismicData }s) => {
   const { items, primary } = prismicData || {};
 
   return (
