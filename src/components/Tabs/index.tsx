@@ -54,6 +54,7 @@ const Tabs: React.FC<Props> = ({ tabs }) => {
           return (
             <CardProperty
               href="/properties"
+              id={id}
               imageAlt={alt}
               imageSrc={url}
               name={name}
@@ -61,6 +62,7 @@ const Tabs: React.FC<Props> = ({ tabs }) => {
               country={country}
               price={price}
               key={`${id}-${name}`}
+              isPropertyDetail
             />
           );
         })}

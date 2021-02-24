@@ -44,6 +44,7 @@ const FeaturedProperty: NextPage<{
           return (
             <CardProperty
               href="/properties"
+              id={id}
               imageAlt={alt}
               imageSrc={url}
               name={name}
