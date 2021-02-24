@@ -22,12 +22,16 @@ const Properties: NextPage<Props> = (props) => {
   if (!prismicData) {
     return <ErrorPage statusCode={404} />;
   }
-  const { body1, logo, black_logo } = prismicData.data || {};
+  const { body1, logo, black_logo, featured_properties_describe } =
+    prismicData.data || {};
 
   return (
     <div className="container">
       <Layout body1={body1} black_logo={black_logo} logo={logo}>
-        <Tabs tabs={properties} />
+        <Tabs
+          tabs={properties}
+          featured_properties_describe={featured_properties_describe}
+        />
       </Layout>
     </div>
   );

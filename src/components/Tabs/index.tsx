@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 
+import { RichTextBlock } from 'prismic-reactjs';
+
 import { Property } from '../../types/PropertyType';
 
 import Tab from './Tab';
 import CardProperty from '../CardProperty';
 
 type Props = {
-  tabs: Property;
+  tabs: Property[];
+  featured_properties_describe: RichTextBlock[];
 };
 
-const Tabs: React.FC<Props> = ({ tabs }) => {
+const Tabs: React.FC<Props> = ({ tabs, featured_properties_describe }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   var filteredTabs = tabs.reduce(function (acc, curr) {
@@ -61,6 +64,7 @@ const Tabs: React.FC<Props> = ({ tabs }) => {
               price={price}
               key={`${id}-${name}`}
               isPropertyDetail
+              describe={featured_properties_describe}
             />
           );
         })}

@@ -37,11 +37,12 @@ const CardProperty: React.FC<Props> = ({
     e.preventDefault();
     router.push(href);
   };
+
   return (
     <div className="font-raleWay property-wrapper mx-auto w-1147 mb-10">
       {isPropertyDetail ? (
         <Link
-          as={`properties/${id}`}
+          as={`/properties/${id}`}
           href={`/properties/[id]`}
           passHref
           key={`/user/${id}`}
@@ -54,7 +55,10 @@ const CardProperty: React.FC<Props> = ({
               <div className="text-sm text-gray-80 mt-10">{price}</div>
             </div>
             <div className="py-10 border-t border-gray-90 justify-center flex">
-              <span className="text-sm text-gray-80">{describe}</span>
+              <span className="text-sm text-gray-80">
+                {' '}
+                {RichText.asText(describe)}
+              </span>
             </div>
           </a>
         </Link>
