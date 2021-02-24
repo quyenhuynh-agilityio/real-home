@@ -11,14 +11,14 @@ type Props = {
   placeholder?: string;
 };
 
-const Input = ({
+const Input: React.FC<Props> = ({
   name = '',
   defaultValue = '',
   type = 'text',
   inputRef = null,
   placeholder = '',
   className = '',
-}: Props) => {
+}) => {
   return (
     <input
       name={name}

@@ -3,10 +3,11 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import ErrorPage from 'next/error';
 
+import { RichText } from 'prismic-reactjs';
+
 import { Client } from '../../../prismic-configuration';
 
 import Form from '../../components/Form';
-import { RichText } from 'prismic-reactjs';
 
 const Login = (props) => {
   const { log_in_title, email_placeholder, password_placeholder } =

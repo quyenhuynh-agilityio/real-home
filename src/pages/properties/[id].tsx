@@ -1,5 +1,8 @@
+import React from 'react';
+
 import Image from 'next/image';
 import { GetServerSideProps, NextPage } from 'next';
+import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
 import { RichText } from 'prismic-reactjs';
@@ -18,6 +21,8 @@ type Props = {
 };
 
 const PropertyDetail: NextPage<Props> = (props) => {
+  const router = useRouter();
+
   const { properties, prismicData } = props || {};
 
   if (!properties && !prismicData) {
@@ -28,6 +33,11 @@ const PropertyDetail: NextPage<Props> = (props) => {
     prismicData.data || {};
   const { name, description, image, country, state, price } = properties || {};
   const { url, alt } = image || {};
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push('/properties');
+  };
 
   return (
     <div className="container">
@@ -48,7 +58,10 @@ const PropertyDetail: NextPage<Props> = (props) => {
           </div>
         </div>
         <div className="text-center pb-100">
-          <Button className="btn btn-primary bg-red-100 font-raleWay rounded-sm">
+          <Button
+            onClick={handleClick}
+            className="btn btn-primary bg-red-100 font-raleWay rounded-sm"
+          >
             {RichText.asText(all_properties_button_label)}
           </Button>
         </div>

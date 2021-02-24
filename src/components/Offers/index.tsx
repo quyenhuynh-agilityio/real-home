@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { RichText, RichTextBlock } from 'prismic-reactjs';
 
 type Props = {

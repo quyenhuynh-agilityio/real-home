@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { GetStaticProps, NextPage } from 'next';
+
 import { Client } from '../../prismic-configuration';
 
 import { HomePageType } from '../types/HomePageType';
@@ -25,7 +27,6 @@ const HomePage: NextPage<Props> = (props) => {
     const { body, body1, logo, black_logo, offer_title, offer_description } =
       data || {};
 
-    console.log('data', data);
     return (
       <div className="container">
         <Layout body1={body1} black_logo={black_logo} logo={logo}>

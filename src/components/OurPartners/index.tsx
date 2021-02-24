@@ -1,6 +1,9 @@
 import React from 'react';
+
 import Image from 'next/image';
+
 import { RichText, RichTextBlock } from 'prismic-reactjs';
+
 import { Property } from '../../types/PropertyType';
 
 type Partners = {

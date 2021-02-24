@@ -1,8 +1,12 @@
 import React from 'react';
+
 import { GetStaticProps, NextPage } from 'next';
-import { Client } from '../../../prismic-configuration';
-import { RichText } from 'prismic-reactjs';
+
 import Image from 'next/image';
+
+import { RichText } from 'prismic-reactjs';
+
+import { Client } from '../../../prismic-configuration';
 
 import { HomePageType } from '../../types/HomePageType';
 import { AboutPageType } from '../../types/AboutPageType';

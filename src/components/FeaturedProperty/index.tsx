@@ -1,18 +1,22 @@
 import React from 'react';
+
+import { useRouter } from 'next/router';
+
 import { RichText } from 'prismic-reactjs';
 
-import { NextPage } from 'next';
+import { Property } from '../../types/PropertyType';
 
 import Button from '../Button';
 import CardProperty from '../CardProperty';
-import { Property } from '../../types/PropertyType';
 
-type Props = Property;
+type Props = Property[];
 
-const FeaturedProperty: NextPage<{
+const FeaturedProperty: React.FC<{
   prismicData;
   properties: Props;
 }> = ({ prismicData, properties }) => {
+  const router = useRouter();
+
   const {
     featured_properties_title,
     featured_properties_description,
@@ -21,6 +25,11 @@ const FeaturedProperty: NextPage<{
   } = prismicData || {};
 
   const formatData = properties.slice(0, 6);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push('/properties');
+  };
 
   return (
     <div className="text-center py-100 bg-gray-120">
@@ -51,7 +60,10 @@ const FeaturedProperty: NextPage<{
           );
         })}
       </div>
-      <Button className="btn btn-primary bg-red-100 font-raleWay rounded-sm">
+      <Button
+        className="btn btn-primary bg-red-100 font-raleWay rounded-sm"
+        onClick={handleClick}
+      >
         {RichText.asText(all_properties_button_label)}
       </Button>
     </div>

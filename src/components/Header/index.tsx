@@ -1,11 +1,22 @@
 import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { RichText } from 'prismic-reactjs';
 
-const Header = ({ prismicData, logo }) => {
-  const { url, alt } = logo || [];
+import { HomePageType } from '../../types/HomePageType';
+
+type Props = {
+  prismicData: HomePageType;
+  logo: {
+    url: string;
+    alt: string;
+  };
+};
+
+const Header: React.FC<Props> = ({ prismicData, logo }) => {
+  const { url, alt } = logo || {};
   return (
     <div className="container bg-white text-black font-playfair">
       <div className="grid grid-cols-3 gap-4 text-center py-35 px-100 items-center">

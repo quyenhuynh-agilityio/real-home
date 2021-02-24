@@ -1,11 +1,22 @@
 import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { RichText } from 'prismic-reactjs';
 
-const Footer = ({ prismicData, logo }) => {
-  const { url, alt } = logo || [];
+import { HomePageType } from '../../types/HomePageType';
+
+type Props = {
+  prismicData: HomePageType;
+  logo: {
+    url: string;
+    alt: string;
+  };
+};
+
+const Footer: React.FC<Props> = ({ prismicData, logo }) => {
+  const { url, alt } = logo || {};
 
   return (
     <div className="container bg-gray-100 text-white font-playfair">

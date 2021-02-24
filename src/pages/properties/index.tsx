@@ -1,5 +1,6 @@
+import React from 'react';
+
 import { GetServerSideProps, NextPage } from 'next';
-import fetch from 'node-fetch';
 import ErrorPage from 'next/error';
 
 import { Client } from '../../../prismic-configuration';
