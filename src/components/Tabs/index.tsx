@@ -8,7 +8,7 @@ import Tab from './Tab';
 import CardProperty from '../CardProperty';
 
 type Props = {
-  tabs: Property[];
+  tabs: Array<Property>;
   featured_properties_describe: RichTextBlock[];
 };
 
@@ -49,19 +49,12 @@ const Tabs: React.FC<Props> = ({ tabs, featured_properties_describe }) => {
       </div>
       <div className="grid grid-cols-3 gap-10 py-64 mx-auto w-1147">
         {filteredTabs[selectedTab].items.map((item) => {
-          const { name, country, state, price, image, id } = item;
-          const { url, alt } = image || {};
+          const { name, id } = item;
 
           return (
             <CardProperty
               href="/properties"
-              id={id}
-              imageAlt={alt}
-              imageSrc={url}
-              name={name}
-              state={state}
-              country={country}
-              price={price}
+              property={item}
               key={`${id}-${name}`}
               isPropertyDetail
               describe={featured_properties_describe}

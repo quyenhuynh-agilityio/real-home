@@ -9,7 +9,7 @@ import { Property } from '../../types/PropertyType';
 import Button from '../Button';
 import CardProperty from '../CardProperty';
 
-type Props = Property[];
+type Props = Array<Property>;
 
 const FeaturedProperty: React.FC<{
   prismicData;
@@ -41,19 +41,12 @@ const FeaturedProperty: React.FC<{
       </div>
       <div className="grid grid-cols-3 gap-10 py-64 mx-auto w-1147">
         {formatData.map((item) => {
-          const { name, country, state, price, image, id } = item;
-          const { url, alt } = image || {};
+          const { name, image, id } = item;
 
           return (
             <CardProperty
               href="/properties"
-              id={id}
-              imageAlt={alt}
-              imageSrc={url}
-              name={name}
-              state={state}
-              country={country}
-              price={price}
+              property={item}
               key={`${id}-${name}`}
               describe={featured_properties_describe}
             />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import Image from 'next/image';
 import { GetServerSideProps, NextPage } from 'next';
@@ -89,4 +89,4 @@ export const getServerSideProps: GetServerSideProps = async ({
   };
 };
 
-export default PropertyDetail;
+export default memo(PropertyDetail);

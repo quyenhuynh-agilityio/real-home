@@ -31,6 +31,8 @@ const Tab: React.FC<Props> = ({
 };
 
 export default memo(Tab, (prevProps, nextProps) => {
-  prevProps.selectedTab === nextProps.selectedTab &&
-    prevProps.index === nextProps.index;
+  return (
+    prevProps.selectedTab === nextProps.selectedTab &&
+    prevProps.index === nextProps.index
+  );
 });

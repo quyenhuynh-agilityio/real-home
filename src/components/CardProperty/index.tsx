@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,33 +6,25 @@ import { useRouter } from 'next/router';
 
 import { RichText, RichTextBlock } from 'prismic-reactjs';
 
+import { Property } from '../../types/PropertyType';
+
 type Props = {
-  id: string;
-  imageSrc?: string;
-  imageAlt?: string;
-  name?: string;
-  price?: string;
-  country?: string;
-  state?: string;
+  property: Property;
   href?: string;
   describe?: RichTextBlock[];
   isPropertyDetail?: boolean;
 };
 
 const CardProperty: React.FC<Props> = ({
-  id,
-  imageSrc,
-  imageAlt,
-  name,
-  country,
-  state,
-  price,
+  property,
   href,
   describe,
   isPropertyDetail,
 }) => {
   const router = useRouter();
 
+  const { id, image, name, country, state, price } = property;
+  const { url, alt } = image || {};
   const handleClick = (e) => {
     e.preventDefault();
     router.push(href);
@@ -48,7 +40,7 @@ const CardProperty: React.FC<Props> = ({
           key={`/user/${id}`}
         >
           <a>
-            <Image src={imageSrc} alt={imageAlt} width={365} height={220} />
+            <Image src={url} alt={alt} width={365} height={220} />
             <div className="flex flex-col items-center py-30">
               <div className="text-lg text-gray-70 mb-5">{name}</div>
               <div className="text-sm text-gray-80">{`${state} / ${country}`}</div>
@@ -64,7 +56,7 @@ const CardProperty: React.FC<Props> = ({
         </Link>
       ) : (
         <a href={href} onClick={handleClick}>
-          <Image src={imageSrc} alt={imageAlt} width={365} height={220} />
+          <Image src={url} alt={url} width={365} height={220} />
           <div className="flex flex-col items-center py-30">
             <div className="text-lg text-gray-70 mb-5">{name}</div>
             <div className="text-sm text-gray-80">{`${state} / ${country}`}</div>
@@ -81,4 +73,9 @@ const CardProperty: React.FC<Props> = ({
   );
 };
 
-export default CardProperty;
+export default memo(CardProperty, (prevProps, nextProps) => {
+  return (
+    prevProps.property === nextProps.property &&
+    prevProps.href === nextProps.href
+  );
+});

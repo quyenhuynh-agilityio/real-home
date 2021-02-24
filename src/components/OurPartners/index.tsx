@@ -7,7 +7,7 @@ import { RichText, RichTextBlock } from 'prismic-reactjs';
 import { Property } from '../../types/PropertyType';
 
 type Partners = {
-  items?: Property[];
+  items?: Array<Property>;
   primary: {
     our_partners?: RichTextBlock[];
   };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
@@ -13,7 +13,7 @@ import Tabs from '../../components/Tabs';
 
 type Props = {
   prismicData: HomePageType;
-  properties: Property;
+  properties: Array<Property>;
 };
 
 const Properties: NextPage<Props> = (props) => {
@@ -56,4 +56,4 @@ export const getServerSideProps: GetServerSideProps = async ({
   };
 };
 
-export default Properties;
+export default memo(Properties);
