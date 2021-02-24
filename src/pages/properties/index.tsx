@@ -1,17 +1,27 @@
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import fetch from 'node-fetch';
 import ErrorPage from 'next/error';
 
 import { Client } from '../../../prismic-configuration';
 
+import { HomePageType } from '../../types/HomePageType';
+import { Property } from '../../types/PropertyType';
+
 import Layout from '../../components/Layout';
 import Tabs from '../../components/Tabs';
 
-const Properties = ({ doc, properties }) => {
-  if (!doc) {
+type Props = {
+  prismicData: HomePageType;
+  properties: Property;
+};
+
+const Properties: NextPage<Props> = (props) => {
+  const { prismicData, properties } = props || {};
+
+  if (!prismicData) {
     return <ErrorPage statusCode={404} />;
   }
-  const { body1, logo, black_logo } = doc.data || {};
+  const { body1, logo, black_logo } = prismicData.data || {};
 
   return (
     <div className="container">
@@ -27,14 +37,15 @@ export const getServerSideProps: GetServerSideProps = async ({
 }) => {
   const { ref } = previewData || {};
   const client = Client();
-  const doc = (await client.getSingle('homepage', ref ? { ref } : null)) || {};
+  const prismicData =
+    (await client.getSingle('homepage', ref ? { ref } : null)) || {};
 
   const result = await fetch(`http://localhost:8000/properties`);
   const properties = await result.json();
 
   return {
     props: {
-      doc,
+      prismicData,
       properties,
     },
   };

@@ -1,28 +1,32 @@
 import Image from 'next/image';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import ErrorPage from 'next/error';
 
 import { RichText } from 'prismic-reactjs';
 
 import { Client } from '../../../prismic-configuration';
 
+import { HomePageType } from '../../types/HomePageType';
+import { Property } from '../../types/PropertyType';
+
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 
-type Data = {
-  id: string;
-  name: string;
-  email: string;
+type Props = {
+  prismicData: HomePageType;
+  properties: Property;
 };
 
-const PropertyDetail = ({ data, doc }) => {
-  if (!data && !doc) {
+const PropertyDetail: NextPage<Props> = (props) => {
+  const { properties, prismicData } = props || {};
+
+  if (!properties && !prismicData) {
     return <ErrorPage statusCode={404} />;
   }
 
   const { body1, logo, black_logo, all_properties_button_label } =
-    doc.data || {};
-  const { name, description, image, country, state, price } = data || {};
+    prismicData.data || {};
+  const { name, description, image, country, state, price } = properties || {};
   const { url, alt } = image || {};
 
   return (
@@ -60,14 +64,15 @@ export const getServerSideProps: GetServerSideProps = async ({
 }) => {
   const { ref } = previewData || {};
   const client = Client();
-  const doc = (await client.getSingle('homepage', ref ? { ref } : null)) || {};
+  const prismicData =
+    (await client.getSingle('homepage', ref ? { ref } : null)) || {};
 
   const { id } = params;
   const result = await fetch(`http://localhost:8000/properties/${id}`);
-  const data: Data = await result.json();
+  const properties: Property = await result.json();
 
   return {
-    props: { data, doc },
+    props: { properties, prismicData },
   };
 };
 

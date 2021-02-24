@@ -1,12 +1,12 @@
 import React from 'react';
-import { RichText } from 'prismic-reactjs';
+import { RichText, RichTextBlock } from 'prismic-reactjs';
 
-type OfferType = {
-  title?: string;
-  description?: string;
+type Props = {
+  title?: RichTextBlock[];
+  description?: RichTextBlock[];
 };
 
-const Offers: React.FC<OfferType> = ({ title, description }) => {
+const Offers: React.FC<Props> = ({ title, description }) => {
   return (
     <div className="bg-white py-122">
       <div className="font-raleWay grid grid-rows-3 grid-flow-col gap-4 w-1141 mx-auto">

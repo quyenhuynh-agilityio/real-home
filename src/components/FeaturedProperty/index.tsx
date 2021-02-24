@@ -1,23 +1,17 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
 
-import { GetServerSideProps, NextPage } from 'next';
+import { NextPage } from 'next';
 
 import Button from '../Button';
 import CardProperty from '../CardProperty';
+import { Property } from '../../types/PropertyType';
 
-type Property = {
-  src?: string;
-  alt?: string;
-  title?: string;
-  description?: string;
-};
-
-type FeaturedType = Property[];
+type Props = Property;
 
 const FeaturedProperty: NextPage<{
   prismicData;
-  properties: FeaturedType;
+  properties: Props;
 }> = ({ prismicData, properties }) => {
   const {
     featured_properties_title,
@@ -52,6 +46,7 @@ const FeaturedProperty: NextPage<{
               country={country}
               price={price}
               key={`${id}-${name}`}
+              describe={featured_properties_describe}
             />
           );
         })}

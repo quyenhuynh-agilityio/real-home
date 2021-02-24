@@ -1,13 +1,13 @@
 import React, { ReactNode } from 'react';
 
-type ButtonType = {
+type Props = {
   children?: ReactNode;
   onClick?: (e: React.MouseEvent) => void;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 };
 
-const Button: React.FC<ButtonType> = ({
+const Button: React.FC<Props> = ({
   onClick = () => {},
   className = '',
   type = 'button',

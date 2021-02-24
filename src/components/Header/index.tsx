@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 import { RichText } from 'prismic-reactjs';
 
-import { linkResolver } from '../../../prismic-configuration';
-
 const Header = ({ prismicData, logo }) => {
   const { url, alt } = logo || [];
   return (

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
+
+import { Property } from '../../types/PropertyType';
+
 import Tab from './Tab';
 import CardProperty from '../CardProperty';
 
-type TabsProps = {
-  country: string;
-  state: string;
-};
-
 type Props = {
-  tabs: TabsProps[];
+  tabs: Property;
 };
 
 const Tabs: React.FC<Props> = ({ tabs }) => {

@@ -1,9 +1,22 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
-import { RichText } from 'prismic-reactjs';
+import { RichText, RichTextBlock } from 'prismic-reactjs';
 
-const Carousel = ({ hero }) => {
+type Props = {
+  hero: {
+    items: {
+      hero_image: {
+        url: string;
+        alt: string;
+      };
+      hero_title: RichTextBlock[];
+      hero_price: RichTextBlock[];
+    };
+  };
+};
+
+const Carousel: React.FC<Props> = ({ hero }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,6 +27,7 @@ const Carousel = ({ hero }) => {
     autoplaySpeed: 3000,
   };
   const { items } = hero || {};
+  console.log('hero', hero);
 
   return (
     <div>

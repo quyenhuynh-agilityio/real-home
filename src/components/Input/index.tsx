@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-type InputType = {
+type Props = {
   children?: ReactNode;
   onClick?: (e: React.MouseEvent) => void;
   className?: string;
@@ -18,7 +18,7 @@ const Input = ({
   inputRef = null,
   placeholder = '',
   className = '',
-}: InputType) => {
+}: Props) => {
   return (
     <input
       name={name}

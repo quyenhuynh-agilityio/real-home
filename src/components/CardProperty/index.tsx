@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { useRouter } from 'next/router';
+import { RichText, RichTextBlock } from 'prismic-reactjs';
 
-type FeaturedType = {
+type Props = {
   id: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -13,10 +14,11 @@ type FeaturedType = {
   country?: string;
   state?: string;
   href?: string;
+  describe?: RichTextBlock[];
   isPropertyDetail?: boolean;
 };
 
-const CardProperty: React.FC<FeaturedType> = ({
+const CardProperty: React.FC<Props> = ({
   id,
   imageSrc,
   imageAlt,
@@ -25,6 +27,7 @@ const CardProperty: React.FC<FeaturedType> = ({
   state,
   price,
   href,
+  describe,
   isPropertyDetail,
 }) => {
   const router = useRouter();
@@ -50,9 +53,7 @@ const CardProperty: React.FC<FeaturedType> = ({
               <div className="text-sm text-gray-80 mt-10">{price}</div>
             </div>
             <div className="py-10 border-t border-gray-90 justify-center flex">
-              <span className="text-sm text-gray-80">
-                3400 Sq Ft 2 Bedrooms 1 Bathroom
-              </span>
+              <span className="text-sm text-gray-80">{describe}</span>
             </div>
           </a>
         </Link>
@@ -66,7 +67,7 @@ const CardProperty: React.FC<FeaturedType> = ({
           </div>
           <div className="py-10 border-t border-gray-90 justify-center flex">
             <span className="text-sm text-gray-80">
-              3400 Sq Ft 2 Bedrooms 1 Bathroom
+              {RichText.asText(describe)}
             </span>
           </div>
         </a>

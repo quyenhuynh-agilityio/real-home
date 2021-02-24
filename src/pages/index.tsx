@@ -1,6 +1,9 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { Client } from '../../prismic-configuration';
+
+import { HomePageType } from '../types/HomePageType';
+import { Property } from '../types/PropertyType';
 
 import Featured from '../components/Featured';
 import Offers from '../components/Offers';
@@ -9,12 +12,20 @@ import OurPartners from '../components/OurPartners';
 import Carousel from '../components/Carousel';
 import Layout from '../components/Layout';
 
-const HomePage = ({ doc, properties }) => {
-  if (doc) {
-    const { data } = doc || {};
-    const { body, body1, logo, black_logo } = data || {};
-    const { offer_title, offer_description } = data || {};
+type Props = {
+  prismicData: HomePageType;
+  properties: Property;
+};
 
+const HomePage: NextPage<Props> = (props) => {
+  const { prismicData, properties } = props || {};
+
+  if (prismicData) {
+    const { data } = prismicData || {};
+    const { body, body1, logo, black_logo, offer_title, offer_description } =
+      data || {};
+
+    console.log('data', data);
     return (
       <div className="container">
         <Layout body1={body1} black_logo={black_logo} logo={logo}>
@@ -54,12 +65,13 @@ export let getStaticProps: GetStaticProps = async ({
   const { ref } = previewData || {};
 
   const client = Client();
-  const doc = (await client.getSingle('homepage', ref ? { ref } : null)) || {};
+  const prismicData =
+    (await client.getSingle('homepage', ref ? { ref } : null)) || {};
   const result = await fetch(`http://localhost:8000/properties`);
   const properties = await result.json();
   return {
     props: {
-      doc,
+      prismicData,
       properties,
       preview,
     },

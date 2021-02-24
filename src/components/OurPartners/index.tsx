@@ -1,15 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { RichText } from 'prismic-reactjs';
+import { RichText, RichTextBlock } from 'prismic-reactjs';
+import { Property } from '../../types/PropertyType';
+
 type Partners = {
-  items?: {
-    icon?: {
-      src?: string;
-      alt?: string;
-    };
-  };
+  items?: Property[];
   primary: {
-    our_partners?: string;
+    our_partners?: RichTextBlock[];
   };
 };
 

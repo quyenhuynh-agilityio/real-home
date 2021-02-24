@@ -1,15 +1,25 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { Client } from '../../../prismic-configuration';
 import { RichText } from 'prismic-reactjs';
 import Image from 'next/image';
 
+import { HomePageType } from '../../types/HomePageType';
+import { AboutPageType } from '../../types/AboutPageType';
+
 import Layout from '../../components/Layout';
 import Featured from '../../components/Featured';
 
-const About = ({ doc, prismicHomeData }) => {
-  if (doc && prismicHomeData) {
-    const { data } = doc || {};
+type Props = {
+  prismicAboutData: AboutPageType;
+  prismicHomeData: HomePageType;
+};
+
+const About: NextPage<Props> = (props) => {
+  const { prismicAboutData, prismicHomeData } = props || {};
+
+  if (prismicAboutData && prismicHomeData) {
+    const { data } = prismicAboutData || {};
 
     const { body, body1, black_logo, logo } = prismicHomeData.data || {};
     const {
@@ -67,13 +77,13 @@ export const getStaticProps: GetStaticProps = async ({
   const { ref } = previewData || {};
 
   const client = Client();
-  const doc =
+  const prismicAboutData =
     (await client.getSingle('about_us_page', ref ? { ref } : null)) || {};
   const prismicHomeData =
     (await client.getSingle('homepage', ref ? { ref } : null)) || {};
   return {
     props: {
-      doc,
+      prismicAboutData,
       prismicHomeData,
       preview,
     },
