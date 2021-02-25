@@ -10,5 +10,7 @@ export type HomePageType = {
     offer_title: RichTextBlock[];
     black_logo: RichTextBlock[];
     logo: RichTextBlock[];
+    body: any[];
+    body1: any[];
   };
 };

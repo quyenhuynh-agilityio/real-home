@@ -16,7 +16,7 @@ import Layout from '../components/Layout';
 
 type Props = {
   prismicData: HomePageType;
-  properties: Property;
+  properties: Property[];
 };
 
 const HomePage: NextPage<Props> = (props) => {
@@ -30,7 +30,7 @@ const HomePage: NextPage<Props> = (props) => {
     return (
       <div className="container">
         <Layout body1={body1} black_logo={black_logo} logo={logo}>
-          <Carousel hero={body[1]} />
+          <Carousel prismicData={body[1]} />
           <Offers title={offer_title} description={offer_description} />
           <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
             {body &&
@@ -50,7 +50,7 @@ const HomePage: NextPage<Props> = (props) => {
                 );
               })}
           </div>
-          <FeaturedProperty prismicData={data} properties={properties} />
+          <FeaturedProperty prismicData={prismicData} properties={properties} />
           <OurPartners prismicData={body[2]} />
         </Layout>
       </div>

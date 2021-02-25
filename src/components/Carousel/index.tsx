@@ -6,20 +6,22 @@ import Image from 'next/image';
 
 import { RichText, RichTextBlock } from 'prismic-reactjs';
 
+type Items = {
+  hero_image: {
+    url: string;
+    alt: string;
+  };
+  hero_title: RichTextBlock[];
+  hero_price: RichTextBlock[];
+};
+
 type Props = {
-  hero: {
-    items: {
-      hero_image: {
-        url: string;
-        alt: string;
-      };
-      hero_title: RichTextBlock[];
-      hero_price: RichTextBlock[];
-    };
+  prismicData: {
+    items: Array<Items>;
   };
 };
 
-const Carousel: React.FC<Props> = ({ hero }) => {
+const Carousel: React.FC<Props> = ({ prismicData }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -29,7 +31,7 @@ const Carousel: React.FC<Props> = ({ hero }) => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-  const { items } = hero || {};
+  const { items } = prismicData || {};
 
   return (
     <div>

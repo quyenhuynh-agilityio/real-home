@@ -4,17 +4,20 @@ import { useRouter } from 'next/router';
 
 import { RichText } from 'prismic-reactjs';
 
+import { HomePageType } from '../../types/HomePageType';
 import { Property } from '../../types/PropertyType';
 
 import Button from '../Button';
 import CardProperty from '../CardProperty';
 
-type Props = Array<Property>;
+type Props = {
+  prismicData: HomePageType;
+  properties: Property[];
+};
 
-const FeaturedProperty: React.FC<{
-  prismicData;
-  properties: Props;
-}> = ({ prismicData, properties }) => {
+const FeaturedProperty: React.FC<Props> = (props) => {
+  const { properties, prismicData } = props || {};
+
   const router = useRouter();
 
   const {
@@ -22,7 +25,7 @@ const FeaturedProperty: React.FC<{
     featured_properties_description,
     featured_properties_describe,
     all_properties_button_label,
-  } = prismicData || {};
+  } = prismicData.data || {};
 
   const formatData = properties.slice(0, 6);
 

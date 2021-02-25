@@ -4,20 +4,27 @@ import Image from 'next/image';
 
 import { RichText, RichTextBlock } from 'prismic-reactjs';
 
-import { Property } from '../../types/PropertyType';
-
-type Partners = {
-  items?: Array<Property>;
-  primary: {
-    our_partners?: RichTextBlock[];
+type Icon = {
+  icon: {
+    url: string;
+    alt: string;
+    dimensions: {
+      width: string;
+      height: string;
+    };
   };
 };
 
-type OurPartnersType = {
-  prismicData: Partners;
+type Props = {
+  prismicData: {
+    items: Array<Icon>;
+    primary: {
+      our_partners?: RichTextBlock[];
+    };
+  };
 };
 
-const OurPartners: React.FC<OurPartnersType> = ({ prismicData }) => {
+const OurPartners: React.FC<Props> = ({ prismicData }) => {
   const { items, primary } = prismicData || {};
 
   return (
