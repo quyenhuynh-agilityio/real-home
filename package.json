@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start --port 4000",
-    "apiserver": "json-server --watch --port 8000 src/api/db.json"
+    "server": "json-server --watch --port 8000 src/api/db.json"
   },
   "dependencies": {
     "@types/json-server": "^0.14.3",
