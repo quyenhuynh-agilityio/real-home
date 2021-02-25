@@ -1,8 +1,8 @@
 .input-custom {
+  @apply text-base;
   border-radius: 0.25rem;
   border: 1px solid #ced4da;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  font-size: 16;
   width: unset;
   padding: 7px;
   background-color: #fff;

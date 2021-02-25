@@ -1,14 +1,13 @@
 .tab-list {
+  @apply pl-0;
   border-bottom: 1px solid #ccc;
-  padding-left: 0;
 }
 
 .tab-list-item {
-  display: inline-block;
+  @apply inline-block cursor-pointer;
   list-style: none;
   margin-bottom: -1px;
   padding: 8px 30px;
-  cursor: pointer;
 }
 
 .tab-list-active {

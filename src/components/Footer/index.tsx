@@ -43,7 +43,7 @@ const Footer: React.FC<Props> = ({ prismicData, logo }) => {
         </div>
         <div>
           <div className="text-xl pb-5">
-            {RichText.asText(prismicData[0].primary.navigation)}{' '}
+            {RichText.asText(prismicData[2].primary.navigation)}{' '}
           </div>
           <ul>
             {prismicData[2] &&
@@ -65,7 +65,7 @@ const Footer: React.FC<Props> = ({ prismicData, logo }) => {
         </div>
         <div>
           <div className="text-xl pb-5">
-            {RichText.asText(prismicData[2].primary.contact_us)}{' '}
+            {RichText.asText(prismicData[1].primary.contact_us)}{' '}
           </div>
           {prismicData[1] &&
             prismicData[1].items.map((item, index) => {

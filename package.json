@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start",
+    "start": "next start --port 4000",
     "apiserver": "json-server --watch --port 8000 src/api/db.json"
   },
   "dependencies": {
