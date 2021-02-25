@@ -18,7 +18,7 @@ type Props = {
 const Header: React.FC<Props> = ({ prismicData, logo }) => {
   const { url, alt } = logo || {};
   return (
-    <div className="container bg-white text-black font-playfair">
+    <div className="bg-white text-black font-playfair">
       <div className="grid grid-cols-3 gap-4 text-center py-35 px-100 items-center">
         <div>
           <div className="text-left">
@@ -31,7 +31,7 @@ const Header: React.FC<Props> = ({ prismicData, logo }) => {
               const { navigation_label, navigation_path } = item || {};
               return (
                 <li className="text-s" key={`${index}-${navigation_label}`}>
-                  <Link href={RichText.asText(navigation_path)}>
+                  <Link href={RichText.asText(navigation_path)} passHref>
                     <a>{RichText.asText(navigation_label)}</a>
                   </Link>
                 </li>

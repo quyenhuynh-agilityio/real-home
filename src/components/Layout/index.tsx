@@ -5,7 +5,7 @@ import Footer from '../Footer';
 
 const Layout = ({ body1, black_logo, logo, children }) => {
   return (
-    <div className="container">
+    <div>
       <Header prismicData={body1} logo={black_logo} />
       <div>{children}</div>
       <Footer prismicData={body1} logo={logo} />

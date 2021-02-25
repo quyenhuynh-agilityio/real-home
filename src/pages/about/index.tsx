@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GetStaticProps, NextPage } from 'next';
-
+import Head from 'next/head';
 import Image from 'next/image';
 
 import { RichText } from 'prismic-reactjs';
@@ -36,6 +36,14 @@ const About: NextPage<Props> = (props) => {
 
     return (
       <div className="container">
+        <Head>
+          <title>About Us Page</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Layout body1={body1} black_logo={black_logo} logo={logo}>
           <div className="w-1147 mx-auto pb-100">
             <h2 className="font-raleWay text-5xl py-60">

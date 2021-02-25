@@ -55,7 +55,7 @@ const Footer: React.FC<Props> = ({ prismicData, logo }) => {
                     className="text-s pb-5"
                     key={`${index}-${navigation_label}`}
                   >
-                    <Link href={RichText.asText(navigation_path)}>
+                    <Link href={RichText.asText(navigation_path)} passHref>
                       <a>{RichText.asText(navigation_label)}</a>
                     </Link>
                   </li>

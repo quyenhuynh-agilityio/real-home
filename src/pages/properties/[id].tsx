@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 
 import Image from 'next/image';
 import { GetServerSideProps, NextPage } from 'next';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
@@ -41,6 +42,11 @@ const PropertyDetail: NextPage<Props> = (props) => {
 
   return (
     <div className="container">
+      <Head>
+        <title>Property Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Layout body1={body1} black_logo={black_logo} logo={logo}>
         <div className="w-1147 mx-auto pb-60">
           <h2 className="font-raleWay text-5xl py-60">{name}</h2>

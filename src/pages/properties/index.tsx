@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 
 import { GetServerSideProps, NextPage } from 'next';
+import Head from 'next/head';
 import ErrorPage from 'next/error';
 
 import { Client } from '../../../prismic-configuration';
@@ -27,6 +28,11 @@ const Properties: NextPage<Props> = (props) => {
 
   return (
     <div className="container">
+      <Head>
+        <title>Properties Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Layout body1={body1} black_logo={black_logo} logo={logo}>
         <Tabs
           tabs={properties}

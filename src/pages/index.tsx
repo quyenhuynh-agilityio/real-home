@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 
 import { Client } from '../../prismic-configuration';
 
@@ -29,6 +30,14 @@ const HomePage: NextPage<Props> = (props) => {
 
     return (
       <div className="container">
+        <Head>
+          <title>Real Home</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Layout body1={body1} black_logo={black_logo} logo={logo}>
           <Carousel prismicData={body[1]} />
           <Offers title={offer_title} description={offer_description} />
