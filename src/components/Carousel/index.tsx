@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 import { RichText, RichTextBlock } from 'prismic-reactjs';
 
+import { settings } from '../../utils/utilities';
+
 type Items = {
   hero_image: {
     url: string;
@@ -22,15 +24,6 @@ type Props = {
 };
 
 const Carousel: React.FC<Props> = ({ prismicData }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
   const { items } = prismicData || {};
 
   return (

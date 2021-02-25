@@ -6,6 +6,7 @@ import { Property } from '../../types/PropertyType';
 
 import Tab from './Tab';
 import CardProperty from '../CardProperty';
+import { filterByField } from '../../utils/utilities';
 
 type Props = {
   tabs: Array<Property>;
@@ -15,22 +16,7 @@ type Props = {
 const Tabs: React.FC<Props> = ({ tabs, featured_properties_describe }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
-  var filteredTabs = tabs.reduce(function (acc, curr) {
-    var findIfNameExist = acc.findIndex(function (item) {
-      return item.country === curr.country;
-    });
-
-    if (findIfNameExist === -1) {
-      let obj = {
-        country: curr.country,
-        items: [curr],
-      };
-      acc.push(obj);
-    } else {
-      acc[findIfNameExist].items.push(curr);
-    }
-    return acc;
-  }, []);
+  var filteredTabs = filterByField(tabs);
 
   return (
     <div>
