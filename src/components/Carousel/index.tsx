@@ -23,37 +23,36 @@ type Props = {
   };
 };
 
-const Carousel: React.FC<Props> = ({ prismicData }) => {
+const Carousel: React.FC<Props> = ({ prismicData = {} }) => {
   const { items } = prismicData || {};
 
   return (
     <div>
       <Slider {...settings}>
-        {items &&
-          items.map((item, index) => {
-            const { hero_image, hero_title, hero_price } = item || {};
-            const { url, alt } = hero_image || {};
-            return (
-              <div key={`${index}-${hero_price}`}>
-                <div className="bg-cover container">
-                  <div className="centered">
-                    <div className="text-4xl text-white">
-                      {RichText.asText(hero_title)}
-                    </div>
-                    <div className="text-2xl text-white mt-5">
-                      {RichText.asText(hero_price)}
-                    </div>
+        {items.map((item, index) => {
+          const { hero_image, hero_title, hero_price } = item || {};
+          const { url, alt } = hero_image || {};
+          return (
+            <div key={`${index}-${hero_price}`}>
+              <div className="bg-cover container">
+                <div className="centered">
+                  <div className="text-4xl text-white">
+                    {RichText.asText(hero_title)}
                   </div>
-                  <Image
-                    alt={alt}
-                    src={url}
-                    className="z-50"
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
+                  <div className="text-2xl text-white mt-5">
+                    {RichText.asText(hero_price)}
+                  </div>
                 </div>
-                <style jsx>{`
+                <Image
+                  alt={alt}
+                  src={url}
+                  className="z-50"
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
+                />
+              </div>
+              <style jsx>{`
                       .bg-cover {
                         background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(${url});
                         background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(${url});
@@ -68,9 +67,9 @@ const Carousel: React.FC<Props> = ({ prismicData }) => {
                         }
                       }
                     `}</style>
-              </div>
-            );
-          })}
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );

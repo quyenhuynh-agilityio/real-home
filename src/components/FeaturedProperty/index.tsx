@@ -16,7 +16,7 @@ type Props = {
 };
 
 const FeaturedProperty: React.FC<Props> = (props) => {
-  const { properties, prismicData } = props || {};
+  const { properties = [], prismicData } = props || {};
 
   const router = useRouter();
 

@@ -8,6 +8,8 @@ import { RichText, RichTextBlock } from 'prismic-reactjs';
 
 import { Property } from '../../types/PropertyType';
 
+import Card from '../Card';
+
 type Props = {
   property: Property;
   href?: string;
@@ -16,15 +18,15 @@ type Props = {
 };
 
 const CardProperty: React.FC<Props> = ({
-  property,
-  href,
+  property = {},
+  href = '',
+  isPropertyDetail = false,
   describe,
-  isPropertyDetail,
 }) => {
   const router = useRouter();
 
-  const { id, image, name, country, state, price } = property;
-  const { url, alt } = image || {};
+  const { id } = property;
+
   const handleClick = (e) => {
     e.preventDefault();
     router.push(href);
@@ -39,35 +41,20 @@ const CardProperty: React.FC<Props> = ({
           passHref
           key={`/user/${id}`}
         >
-          <a>
-            <Image src={url} alt={alt} width={365} height={220} />
-            <div className="flex flex-col items-center py-30">
-              <div className="text-lg text-gray-70 mb-5">{name}</div>
-              <div className="text-sm text-gray-80">{`${state} / ${country}`}</div>
-              <div className="text-sm text-gray-80 mt-10">{price}</div>
-            </div>
-            <div className="py-10 border-t border-gray-90 justify-center flex">
-              <span className="text-sm text-gray-80">
-                {' '}
-                {RichText.asText(describe)}
-              </span>
-            </div>
-          </a>
+          <Card
+            property={property}
+            href={href}
+            describe={describe}
+            handleClick={handleClick}
+          />
         </Link>
       ) : (
-        <a href={href} onClick={handleClick}>
-          <Image src={url} alt={url} width={365} height={220} />
-          <div className="flex flex-col items-center py-30">
-            <div className="text-lg text-gray-70 mb-5">{name}</div>
-            <div className="text-sm text-gray-80">{`${state} / ${country}`}</div>
-            <div className="text-sm text-gray-80 mt-10">{price}</div>
-          </div>
-          <div className="py-10 border-t border-gray-90 justify-center flex">
-            <span className="text-sm text-gray-80">
-              {RichText.asText(describe)}
-            </span>
-          </div>
-        </a>
+        <Card
+          property={property}
+          href={href}
+          describe={describe}
+          handleClick={handleClick}
+        />
       )}
     </div>
   );

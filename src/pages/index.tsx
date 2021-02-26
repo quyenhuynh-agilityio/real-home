@@ -77,6 +77,7 @@ export let getStaticProps: GetStaticProps = async ({
   const client = Client();
   const prismicData =
     (await client.getSingle('homepage', ref ? { ref } : null)) || {};
+
   const result = await fetch(`http://localhost:8000/properties`);
   const properties = await result.json();
   return {

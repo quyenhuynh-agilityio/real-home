@@ -32,16 +32,15 @@ const OurPartners: React.FC<Props> = ({ prismicData }) => {
       <div className="text-lg text-gray-70 pr-3 text-3xl">
         {RichText.asText(primary.our_partners)}
       </div>
-      {items &&
-        items.map((item, index) => {
-          const { url, alt, dimensions } = item.icon || {};
-          const { width, height } = dimensions || {};
-          return (
-            <div className="px-9" key={`${index}-${alt}`}>
-              <Image src={url} alt={alt} width={width} height={height} />
-            </div>
-          );
-        })}
+      {items.map((item, index) => {
+        const { url, alt, dimensions } = item.icon || {};
+        const { width, height } = dimensions || {};
+        return (
+          <div className="px-9" key={`${index}-${alt}`}>
+            <Image src={url} alt={alt} width={width} height={height} />
+          </div>
+        );
+      })}
     </div>
   );
 };

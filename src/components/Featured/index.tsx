@@ -11,7 +11,12 @@ type Props = {
   description?: RichTextBlock[];
 };
 
-const Featured: React.FC<Props> = ({ src, alt, title, description }) => {
+const Featured: React.FC<Props> = ({
+  src = '',
+  alt = '',
+  title,
+  description,
+}) => {
   return (
     <div className="font-raleWay w-230 ml-16 mr-16">
       <Image src={src} alt={alt} width={27} height={27} />

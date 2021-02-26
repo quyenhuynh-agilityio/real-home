@@ -1,11 +1,10 @@
 import React from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
-
-import { RichText } from 'prismic-reactjs';
 
 import { HomePageType } from '../../types/HomePageType';
+
+import Navigation from '../Navigation';
 
 type Props = {
   prismicData: HomePageType;
@@ -15,7 +14,7 @@ type Props = {
   };
 };
 
-const Header: React.FC<Props> = ({ prismicData, logo }) => {
+const Header: React.FC<Props> = ({ prismicData, logo = {} }) => {
   const { url, alt } = logo || {};
   return (
     <div className="bg-white text-black font-playfair">
@@ -25,19 +24,10 @@ const Header: React.FC<Props> = ({ prismicData, logo }) => {
             <Image src={url} alt={alt} width={174} height={46} />
           </div>
         </div>
-        <ul className="flex justify-between">
-          {prismicData[2] &&
-            prismicData[2].items.map((item, index) => {
-              const { navigation_label, navigation_path } = item || {};
-              return (
-                <li className="text-s" key={`${index}-${navigation_label}`}>
-                  <Link href={RichText.asText(navigation_path)} passHref>
-                    <a>{RichText.asText(navigation_label)}</a>
-                  </Link>
-                </li>
-              );
-            })}
-        </ul>
+        <Navigation
+          prismicData={prismicData}
+          classNames={{ list: 'flex justify-between', item: 'text-s' }}
+        />
         <div className="flex justify-around">
           {prismicData[0] &&
             prismicData[0].items.map((item, index) => {

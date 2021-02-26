@@ -7,6 +7,8 @@ import { RichText } from 'prismic-reactjs';
 
 import { HomePageType } from '../../types/HomePageType';
 
+import Navigation from '../Navigation';
+
 type Props = {
   prismicData: HomePageType;
   logo: {
@@ -15,7 +17,7 @@ type Props = {
   };
 };
 
-const Footer: React.FC<Props> = ({ prismicData, logo }) => {
+const Footer: React.FC<Props> = ({ prismicData, logo = {} }) => {
   const { url, alt } = logo || {};
 
   return (
@@ -45,23 +47,10 @@ const Footer: React.FC<Props> = ({ prismicData, logo }) => {
           <div className="text-xl pb-5">
             {RichText.asText(prismicData[2].primary.navigation)}{' '}
           </div>
-          <ul>
-            {prismicData[2] &&
-              prismicData[2].items.map((item, index) => {
-                const { navigation_label, navigation_path } = item || {};
-
-                return (
-                  <li
-                    className="text-s pb-5"
-                    key={`${index}-${navigation_label}`}
-                  >
-                    <Link href={RichText.asText(navigation_path)} passHref>
-                      <a>{RichText.asText(navigation_label)}</a>
-                    </Link>
-                  </li>
-                );
-              })}
-          </ul>
+          <Navigation
+            prismicData={prismicData}
+            classNames={{ item: 'text-s pb-5' }}
+          />
         </div>
         <div>
           <div className="text-xl pb-5">
