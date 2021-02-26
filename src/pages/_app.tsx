@@ -24,8 +24,9 @@ type Props = {
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { prismicData } = pageProps || {};
+  const { data } = prismicData || {};
   return (
-    <Layout prismicData={prismicData.data}>
+    <Layout prismicData={data}>
       <Component {...pageProps} />
     </Layout>
   );
