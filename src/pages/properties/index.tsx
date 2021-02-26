@@ -9,7 +9,6 @@ import { Client } from '../../../prismic-configuration';
 import { HomePageType } from '../../types/HomePageType';
 import { Property } from '../../types/PropertyType';
 
-import Layout from '../../components/Layout';
 import Tabs from '../../components/Tabs';
 
 type Props = {
@@ -23,8 +22,7 @@ const Properties: NextPage<Props> = (props) => {
   if (!prismicData) {
     return <ErrorPage statusCode={404} />;
   }
-  const { body1, logo, black_logo, featured_properties_describe } =
-    prismicData.data || {};
+  const { featured_properties_describe } = prismicData.data || {};
 
   return (
     <div className="container">
@@ -33,12 +31,11 @@ const Properties: NextPage<Props> = (props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout body1={body1} black_logo={black_logo} logo={logo}>
-        <Tabs
-          tabs={properties}
-          featured_properties_describe={featured_properties_describe}
-        />
-      </Layout>
+
+      <Tabs
+        tabs={properties}
+        featured_properties_describe={featured_properties_describe}
+      />
     </div>
   );
 };

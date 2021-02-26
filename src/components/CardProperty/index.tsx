@@ -1,10 +1,9 @@
 import React, { memo } from 'react';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { RichText, RichTextBlock } from 'prismic-reactjs';
+import { RichTextBlock } from 'prismic-reactjs';
 
 import { Property } from '../../types/PropertyType';
 
@@ -41,12 +40,7 @@ const CardProperty: React.FC<Props> = ({
           passHref
           key={`/user/${id}`}
         >
-          <Card
-            property={property}
-            href={href}
-            describe={describe}
-            handleClick={handleClick}
-          />
+          <Card property={property} describe={describe} />
         </Link>
       ) : (
         <Card

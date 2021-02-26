@@ -11,7 +11,6 @@ import { Client } from '../../../prismic-configuration';
 import { HomePageType } from '../../types/HomePageType';
 import { AboutPageType } from '../../types/AboutPageType';
 
-import Layout from '../../components/Layout';
 import Featured from '../../components/Featured';
 
 type Props = {
@@ -44,39 +43,37 @@ const About: NextPage<Props> = (props) => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Layout body1={body1} black_logo={black_logo} logo={logo}>
-          <div className="w-1147 mx-auto pb-100">
-            <h2 className="font-raleWay text-5xl py-60">
-              {RichText.asText(about_our_company)}
-            </h2>
-            <div className="grid grid-cols-2">
-              <div className="">
-                <Image src={url} alt={alt} width={561} height={388} />
-              </div>
-              <div className="pl-10">
-                {RichText.asText(about_our_company_description)}
-              </div>
+        <div className="w-1147 mx-auto pb-100">
+          <h2 className="font-raleWay text-5xl py-60">
+            {RichText.asText(about_our_company)}
+          </h2>
+          <div className="grid grid-cols-2">
+            <div className="">
+              <Image src={url} alt={alt} width={561} height={388} />
+            </div>
+            <div className="pl-10">
+              {RichText.asText(about_our_company_description)}
             </div>
           </div>
-          <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
-            {body &&
-              body[0] &&
-              body[0].items.map((item, index) => {
-                const { featured_icon, featured_name, featured_info } =
-                  item || {};
-                const { url, alt } = featured_icon || {};
-                return (
-                  <Featured
-                    src={url}
-                    alt={alt}
-                    description={featured_info}
-                    title={featured_name}
-                    key={`${index}-${featured_name}`}
-                  />
-                );
-              })}
-          </div>
-        </Layout>
+        </div>
+        <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
+          {body &&
+            body[0] &&
+            body[0].items.map((item, index) => {
+              const { featured_icon, featured_name, featured_info } =
+                item || {};
+              const { url, alt } = featured_icon || {};
+              return (
+                <Featured
+                  src={url}
+                  alt={alt}
+                  description={featured_info}
+                  title={featured_name}
+                  key={`${index}-${featured_name}`}
+                />
+              );
+            })}
+        </div>
       </div>
     );
   }

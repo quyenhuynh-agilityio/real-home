@@ -39,7 +39,6 @@ const Tabs: React.FC<Props> = ({ tabs, featured_properties_describe }) => {
 
           return (
             <CardProperty
-              href="/properties"
               property={item}
               key={`${id}-${name}`}
               isPropertyDetail

@@ -13,7 +13,6 @@ import Offers from '../components/Offers';
 import FeaturedProperty from '../components/FeaturedProperty';
 import OurPartners from '../components/OurPartners';
 import Carousel from '../components/Carousel';
-import Layout from '../components/Layout';
 
 type Props = {
   prismicData: HomePageType;
@@ -38,37 +37,35 @@ const HomePage: NextPage<Props> = (props) => {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Layout body1={body1} black_logo={black_logo} logo={logo}>
-          <Carousel prismicData={body[1]} />
-          <Offers title={offer_title} description={offer_description} />
-          <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
-            {body &&
-              body[0] &&
-              body[0].items.map((item, index) => {
-                const { featured_icon, featured_name, featured_info } =
-                  item || {};
-                const { url, alt } = featured_icon || {};
-                return (
-                  <Featured
-                    src={url}
-                    alt={alt}
-                    description={featured_info}
-                    title={featured_name}
-                    key={`${index}-${featured_name}`}
-                  />
-                );
-              })}
-          </div>
-          <FeaturedProperty prismicData={prismicData} properties={properties} />
-          <OurPartners prismicData={body[2]} />
-        </Layout>
+        <Carousel prismicData={body[1]} />
+        <Offers title={offer_title} description={offer_description} />
+        <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
+          {body &&
+            body[0] &&
+            body[0].items.map((item, index) => {
+              const { featured_icon, featured_name, featured_info } =
+                item || {};
+              const { url, alt } = featured_icon || {};
+              return (
+                <Featured
+                  src={url}
+                  alt={alt}
+                  description={featured_info}
+                  title={featured_name}
+                  key={`${index}-${featured_name}`}
+                />
+              );
+            })}
+        </div>
+        <FeaturedProperty prismicData={prismicData} properties={properties} />
+        <OurPartners prismicData={body[2]} />
       </div>
     );
   }
   return null;
 };
 
-export let getStaticProps: GetStaticProps = async ({
+export const getStaticProps: GetStaticProps = async ({
   preview = null,
   previewData = {},
 }) => {
