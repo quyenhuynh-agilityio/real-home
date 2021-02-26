@@ -1,13 +1,7 @@
 
 
 {
-  "user": [
-    {
-      "id": "01A",
-      "email": "anpan@gmail.com",
-      "password": "anpan@cake"
-    }
-  ],
+
   "properties": [
     {
       "id": 1,
