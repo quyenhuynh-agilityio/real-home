@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 
 import { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
 import ErrorPage from 'next/error';
 
 import { Client } from '../../../prismic-configuration';
@@ -9,6 +8,7 @@ import { Client } from '../../../prismic-configuration';
 import { HomePageType } from '../../types/HomePageType';
 import { Property } from '../../types/PropertyType';
 
+import SEO from '../../components/SEO';
 import Tabs from '../../components/Tabs';
 
 type Props = {
@@ -26,12 +26,11 @@ const Properties: NextPage<Props> = (props) => {
 
   return (
     <div className="container">
-      <Head>
-        <title>Properties Page</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <SEO
+        title="Properties Page"
+        siteTitle="Properties Page"
+        description="This is Properties Page"
+      />
       <Tabs
         tabs={properties}
         featured_properties_describe={featured_properties_describe}

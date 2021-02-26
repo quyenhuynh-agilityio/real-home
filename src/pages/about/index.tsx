@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 
 import { RichText } from 'prismic-reactjs';
@@ -11,6 +10,7 @@ import { Client } from '../../../prismic-configuration';
 import { HomePageType } from '../../types/HomePageType';
 import { AboutPageType } from '../../types/AboutPageType';
 
+import SEO from '../../components/SEO';
 import Featured from '../../components/Featured';
 
 type Props = {
@@ -24,7 +24,7 @@ const About: NextPage<Props> = (props) => {
   if (prismicAboutData && prismicHomeData) {
     const { data } = prismicAboutData || {};
 
-    const { body, body1, black_logo, logo } = prismicHomeData.data || {};
+    const { body } = prismicHomeData.data || {};
     const {
       about_our_company,
       about_our_company_description,
@@ -35,14 +35,11 @@ const About: NextPage<Props> = (props) => {
 
     return (
       <div className="container">
-        <Head>
-          <title>About Us Page</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <SEO
+          title="About Page"
+          siteTitle="About Page"
+          description="This is About Page"
+        />
         <div className="w-1147 mx-auto pb-100">
           <h2 className="font-raleWay text-5xl py-60">
             {RichText.asText(about_our_company)}

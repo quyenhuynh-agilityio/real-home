@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 
 import Image from 'next/image';
 import { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 
@@ -13,6 +12,7 @@ import { Client } from '../../../prismic-configuration';
 import { HomePageType } from '../../types/HomePageType';
 import { Property } from '../../types/PropertyType';
 
+import SEO from '../../components/SEO';
 import Button from '../../components/Button';
 
 type Props = {
@@ -29,8 +29,7 @@ const PropertyDetail: NextPage<Props> = (props) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  const { body1, logo, black_logo, all_properties_button_label } =
-    prismicData.data || {};
+  const { all_properties_button_label } = prismicData.data || {};
   const { name, description, image, country, state, price } = properties || {};
   const { url, alt } = image || {};
 
@@ -41,11 +40,11 @@ const PropertyDetail: NextPage<Props> = (props) => {
 
   return (
     <div className="container">
-      <Head>
-        <title>Property Page</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO
+        title="Property Page"
+        siteTitle="Property Page"
+        description="This is Property Page"
+      />
       <div className="w-1147 mx-auto pb-60">
         <h2 className="font-raleWay text-5xl py-60">{name}</h2>
         <div className="grid grid-cols-3">

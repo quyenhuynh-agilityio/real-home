@@ -1,13 +1,11 @@
 import React from 'react';
 
 import { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
-
 import { Client } from '../../prismic-configuration';
 
 import { HomePageType } from '../types/HomePageType';
 import { Property } from '../types/PropertyType';
-
+import SEO from '../components/SEO';
 import Featured from '../components/Featured';
 import Offers from '../components/Offers';
 import FeaturedProperty from '../components/FeaturedProperty';
@@ -24,19 +22,15 @@ const HomePage: NextPage<Props> = (props) => {
 
   if (prismicData) {
     const { data } = prismicData || {};
-    const { body, body1, logo, black_logo, offer_title, offer_description } =
-      data || {};
+    const { body, offer_title, offer_description } = data || {};
 
     return (
       <div className="container">
-        <Head>
-          <title>Real Home</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <SEO
+          title="Home Page"
+          siteTitle="Home Page"
+          description="This is Home Page"
+        />
         <Carousel prismicData={body[1]} />
         <Offers title={offer_title} description={offer_description} />
         <div className="flex flex-row text-center justify-center bg-gray-110 py-100">
