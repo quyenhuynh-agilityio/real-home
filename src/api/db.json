@@ -1,0 +1,247 @@
+
+
+{
+
+  "properties": [
+    {
+      "id": 1,
+      "name": "1450 Cloudcroft Drop",
+      "country": "Chicago",
+      "state": "Illinois",
+      "price": "$250,000",
+      "image": {
+        "url": "/cloudcroft.png",
+        "alt": "Cloudcroft Drop"
+      },
+      "description":  "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 2,
+      "name": "140 Small Village",
+      "country": "Kansas City",
+      "state": "Missouri",
+      "price": "$200,000",
+      "image": {
+        "url": "/smallVillage.png",
+        "alt": "Small Village"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 3,
+      "name": "1250 Lake House",
+      "country": "Denver",
+      "state": "Colorado",
+      "price": "$339,000",
+      "image": {
+        "url": "/lakeHouse.png",
+        "alt": "Lake House"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 4,
+      "name": "The Dutch House",
+      "country": "New-York",
+      "state": "Queens",
+      "price": "$400,000",
+      "image": {
+        "url": "/dutchHouse.png",
+        "alt": "The Dutch House"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 5,
+      "name": "Haunted Houses",
+      "country": "London",
+      "state": "Westminster",
+      "price": "$400,000",
+      "image": {
+        "url": "/hauntedHouses.png",
+        "alt": "Haunted Houses"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 6,
+      "name": "1250 Airbnb Homestay",
+      "country": "Kansas City",
+      "state": "Missouri",
+      "price": "$339,000",
+      "image": {
+        "url": "/lakeViewHouse.png",
+        "alt": "Airbnb Homestay"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 7,
+      "name": "1560 Big Village",
+      "country": "Chicago",
+      "state": "Illinois",
+      "price": "$500,000",
+      "image": {
+        "url": "/bigVillage.png",
+        "alt": "Big Village"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 8,
+      "name": "Puerto Real House",
+      "country": "Denver",
+      "state": "Colorado",
+      "price": "$500,000",
+      "image": {
+        "url": "/puertoRealHouse.png",
+        "alt": "Puerto Real House"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 9,
+      "name": "S-Premium Houses",
+      "country": "New-York",
+      "state": "Brooklyn",
+      "price": "$400,000",
+      "image": {
+        "url": "/sPremium.png",
+        "alt": "S-Premium Houses"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 10,
+      "name": "Cardboard House",
+      "country": "Chicago",
+      "state": "Illinois",
+      "price": "$350,000",
+      "image": {
+        "url": "/cardboardHouse.png",
+        "alt": "Cardboard House"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 11,
+      "name": "The Conjuring House",
+      "country": "London",
+      "state": "Richmond Park",
+      "price": "$250,000",
+      "image": {
+        "url": "/conjuringHouse.png",
+        "alt": "The Conjuring House"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 12,
+      "name": "Penhouse Sky Garden",
+      "country": "Denver",
+      "state": "Colorado",
+      "price": "$250,000",
+      "image": {
+        "url": "/penhouseSky.png",
+        "alt": "Penhouse Sky Garden"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 13,
+      "name": "Boutique Penhouse",
+      "country": "Kansas City",
+      "state": "Missouri",
+      "price": "$400,000",
+      "image": {
+        "url": "/boutiquePenhouse.png",
+        "alt": "Boutique Penhouse"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 14,
+      "name": "Penhouse and Pool Villa",
+      "country": "New-York",
+      "state": "Colorado",
+      "price": "$500,000",
+      "image": {
+        "url": "/penhouseAndPool.png",
+        "alt": "Penhouse and Pool Villa"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 15,
+      "name": "Penhouse Aqua Part",
+      "country": "Kansas City",
+      "state": "Missouri",
+      "price": "$200,000",
+      "image": {
+        "url": "/penhouseAquaPart.png",
+        "alt": "Penhouse Aqua Part"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 16,
+      "name": "Penhouse Dolphin Plaza",
+      "country": "London",
+      "state": "Richmond Park",
+      "price": "$400,000",
+      "image": {
+        "url": "/penhouseDolphin.png",
+        "alt": "Penhouse Dolphin Plaza"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 17,
+      "name": "1450 Penhouse",
+      "country": "Chicago",
+      "state": "Illinois",
+      "price": "$250,000",
+      "image": {
+        "url": "/luxuryPenhouse.png",
+        "alt": "Penhouse"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 18,
+      "name": "Penhouse River Park",
+      "country": "London",
+      "state": "Westminster",
+      "price": "$500,000",
+      "image": {
+        "url": "/penhouseRiver.png",
+        "alt": "Penhouse River Park"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 19,
+      "name": "Penhouse Suite",
+      "country": "New-York",
+      "state": "Staten Island",
+      "price": "$250,000",
+      "image": {
+        "url": "/penhouseSuite.png",
+        "alt": "Penhouse Suite"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    },
+    {
+      "id": 20,
+      "name": "Sky Villa",
+      "country": "Denver",
+      "state": "Colorado",
+      "price": "$400,000",
+      "image": {
+        "url": "/skyVilla.png",
+        "alt": "Sky Villa"
+      },
+      "description": "Etiam commodo consequat egestas. Morbi at ligula nulla. Mauris bibendum mi vitae condimentum mollis. Sed sollicitudin enim vehicula, varius sapien id, consectetur sem. Pellentesque posuere maximus lorem, sed pellentesque leo gravida a. Sed vitae eros ac enim laoreet commodo eget eu lorem. Aliquam ac metus convallis, accumsan lacus eget, volutpat ligula. Suspendisse tincidunt, arcu et sagittis hendrerit, felis risus varius diam, a posuere leo dui sit amet lorem. Integer et leo sit amet tortor condimentum mollis. Vestibulum non ligula sit amet orci sagittis pulvinar. Aliquet tellus ac euismod euismod. Donec no interdum arcu. Vivamus sit amet auctor nisl, ornare sodales justo. Integer egestas, diam ac mattis aliquet, ex ante ornare mi, ac rutrum justo tortor sed tellus."
+    }
+  ]
+}

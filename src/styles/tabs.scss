@@ -1,0 +1,17 @@
+.tab-list {
+  @apply pl-0;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-list-item {
+  @apply inline-block cursor-pointer;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 8px 30px;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}

@@ -1,0 +1,14 @@
+/* Component classes button */
+.btn {
+  @apply uppercase text-center relative;
+}
+
+.btn-primary {
+  @apply text-white text-base font-bold shadow-md;
+  width: 175px;
+  padding: 12px;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
